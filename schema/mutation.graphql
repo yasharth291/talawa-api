@@ -29,7 +29,7 @@ module.exports = `
     removeMember (data: MultipleUsersAndOrganizationInput!) : Organization! @auth
     # removeMultipleMembers(data: MultipleUsersAndOrganizationInput!) : Organization!
 
-    adminRemovePost(organizationId: ID!, postId:ID!):Post! @auth
+    adminRemovePost(organizationId: ID!, postId:ID!):Post! @auth 
     adminRemoveEvent(eventId: ID!): Event! @auth
     adminRemoveGroup(groupId:ID!):Message! @auth
 
@@ -71,7 +71,7 @@ module.exports = `
     sendMessageToGroupChat(chatId: ID!, messageContent: String!): GroupChatMessage! @auth
     addUserToGroupChat(userId: ID!, chatId: ID!): GroupChat! @auth
     removeUserFromGroupChat(userId: ID!, chatId: ID!): GroupChat! @auth
-    
+    createPlugin(plugin: PluginInput!): Plugin! @auth
   }
   
 `
